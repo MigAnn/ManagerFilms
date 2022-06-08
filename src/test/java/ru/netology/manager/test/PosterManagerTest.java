@@ -1,7 +1,7 @@
 package ru.netology.manager.test;
 
+import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import ru.netology.domain.PosterItems;
 import ru.netology.manager.PosterManager;
 
@@ -39,7 +39,7 @@ public class PosterManagerTest {
         PosterItems[] actual = manager.findLast();
         PosterItems[] expected = {tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
 
-        Assertions.assertArrayEquals(actual, expected);
+        Assertions.assertArrayEquals(actual,expected);
     }
 
     @Test
