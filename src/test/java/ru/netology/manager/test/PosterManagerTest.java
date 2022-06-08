@@ -41,6 +41,52 @@ public class PosterManagerTest {
 
         Assertions.assertArrayEquals(actual,expected);
     }
+    @Test
+    public void findAll1() {
+        PosterManager manager = new PosterManager(5);
+        manager.add(first);
+        manager.add(second);
+        manager.add(third);
+        manager.add(fourth);
+        manager.add(fifth);
+        manager.add(sixth);
+        manager.add(seventh);
+        manager.add(eighth);
+        manager.add(ninth);
+        manager.add(tenth);
+
+        manager.findAll();
+        manager.findLast();
+
+
+        PosterItems[] actual = manager.findLast();
+        PosterItems[] expected = {tenth, ninth, eighth, seventh, sixth};
+
+        Assertions.assertArrayEquals(actual,expected);
+    }
+    @Test
+    public void findAll2() {
+        PosterManager manager = new PosterManager(15);
+        manager.add(first);
+        manager.add(second);
+        manager.add(third);
+        manager.add(fourth);
+        manager.add(fifth);
+        manager.add(sixth);
+        manager.add(seventh);
+        manager.add(eighth);
+        manager.add(ninth);
+        manager.add(tenth);
+
+        manager.findAll();
+        manager.findLast();
+
+
+        PosterItems[] actual = manager.findLast();
+        PosterItems[] expected = {tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+
+        Assertions.assertArrayEquals(actual,expected);
+    }
 
     @Test
     public void findLast() {
